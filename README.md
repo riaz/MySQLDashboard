@@ -8,7 +8,7 @@ This dashboard has themeing options and has better analytics that the phpMyAdmin
 
 ### Screenshots
 
-![alt text](https://github.com/riaz/MySQLDashboard/tree/master/screenshots/login_screen.png "Login Screen")
+![alt text](https://github.com/riaz/MySQLDashboard/tree/master/screenshots/login_screen.PNG "Login Screen")
 
 
 
