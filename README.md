@@ -7,6 +7,8 @@ MySQLDashboard will be similar to PhpMyAdmin in functionality , with emphasis on
 
 This dashboard has themeing options and has better analytics that the phpMyAdmin has to offer.
 
+Currently 6 themes are supported and 2 more proposed themes will be added later.
+
 ### Screenshot:
 
 **Login Screen**
