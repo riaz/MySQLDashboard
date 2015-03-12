@@ -393,7 +393,24 @@
 							<!-- ############ TAB IMPORT ##########################################-->               						
                         </div>
                         <div class="tab-pane fade" id="tab7">Settings</div>
-                        <div class="tab-pane fade" id="tab8">Synchronize</div>
+
+                        <!-- ############ TAB IMPORT ##########################################-->               						                        
+                        <div class="tab-pane fade" id="tab8">
+                        <h4>Synchronize</h4>
+                        	<div class="panel panel-primary">                        		
+								<div class="panel-heading">
+										<h3 class="panel-title">Synchronize</h3>
+										<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+								</div>
+								<div class="panel-body">
+								</div>
+								<div class="panel-footer">
+										<button type="button" style="padding:1px 5px !important;" class="btn btn-success">Go</button>						
+								</div>				
+							</div>
+                        </div>
+                        <!-- ############ TAB IMPORT ##########################################-->               						
+                        
                         <div class="tab-pane fade" id="tab9">
                         <!-- ############ TAB REPLICATION ##########################################-->               
                         
