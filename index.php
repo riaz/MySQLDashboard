@@ -229,11 +229,15 @@
                			</div>
                 		<div class="panel-body">
                     	<div class="tab-content">
-                        	<div class="tab-pane fade in active" id="tab31"></div>
-                        	<div class="tab-pane fade in active" id="tab32"></div>
-                        	<div class="tab-pane fade in active" id="tab33"></div>
-                        	<div class="tab-pane fade in active" id="tab34"></div>
-                        	<div class="tab-pane fade in active" id="tab35"></div>
+                        	<div class="tab-pane fade in active" id="tab31">
+                        		<h5>Network Traffic Analysis Since Startup : </h5>
+                        	</div>
+                        	<div class="tab-pane fade" id="tab32">
+                        		<h5>Questions since Startup : </h5>
+                        	</div>
+                        	<div class="tab-pane fade" id="tab33"></div>
+                        	<div class="tab-pane fade" id="tab34"></div>
+                        	<div class="tab-pane fade" id="tab35"></div>
                         </div>
                         </div>
                         </div>                                              
@@ -290,10 +294,104 @@
 									</div>
 				
 								</div>
-                        <!-- ############ TAB EXPORT ##########################################-->                            	
-                        
+                        <!-- ############ TAB EXPORT ##########################################-->                            	                        
                         </div>
-                        <div class="tab-pane fade" id="tab6">Import</div>
+                		<!-- ############ TAB IMPORT ##########################################-->               						
+                        <div class="tab-pane fade" id="tab6">
+                        	<h4>Importing into the current Server</h4>
+                        	<!-- ..................File to Import ......................... -->							
+                        	<div class="panel panel-primary">
+                        			<div class="panel-heading">
+										<h3 class="panel-title">File To Import</h3>
+										<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+									</div>
+									<div class="panel-body">
+										File may be compressed (gzip, bzip2, zip) or uncompressed.<br/>
+										A compressed file's name must end in <b>.[format].[compression].</b> Example: <b>.sql.zip</b><br/>
+										<p>Browse your computer : <input style="display: inline" type="file"/>(Max: 2046 KiB)</p>
+										Character set of the file : 
+											  <div class="dropdown" style="display:inline">
+											  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+											  Formats									    
+											    <span class="caret"></span>
+											  </button>
+											  <?php
+											  	dropdownPrepare("SHOW CHARACTER SET","Charset");
+											  ?>
+											</div>
+									</div>							
+							</div>
+							<!-- .................. File to Import ......................... -->
+									
+							<!-- .................. Partial Import ......................... -->							
+							<div class="panel panel-primary">                        		
+									<div class="panel-heading">
+										<h3 class="panel-title">Partial Import</h3>
+										<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+									</div>
+									<div class="panel-body">
+										<input type="checkbox"/><span style="margin-left:5px">Allow the interruption of an import in case the script detects it is close to the PHP timeout limit.</span><br/>
+									    (This might be good way to import large files, however it can break transactions.)<br/>
+										Number of rows to skip, starting from the first row:
+										<input type="text" id="rowSkip" class="form-control" style="width: inherit;display:inline" name="rowSkip" value="0" class="input-sm"/>							   		
+									</div>
+							</div>
+							<!-- .................. Partial Import ......................... -->					
+
+							<!-- .................. Format ......................... -->												
+							<div class="panel panel-primary">                        		
+									<div class="panel-heading">
+										<h3 class="panel-title">Format</h3>
+										<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+									</div>
+									<div class="panel-body">
+										<div class="dropdown">
+										  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+										    Formats
+										    <span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSV</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Open Document Spreadsheet</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ESRI Shape File</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">SQL</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">XML</a></li>										  
+										  </ul>
+										</div>
+									</div>
+							</div>	
+							<!-- .................. Format ......................... -->							
+							<!--.......................... Format Specific Options ..............................-->
+							<div class="panel panel-primary">                        		
+									<div class="panel-heading">
+										<h3 class="panel-title">Format-Specific Options</h3>
+										<span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+									</div>
+									<div class="panel-body">
+										<div class="dropdown">
+										SQL Compatibility Mode : 										
+										  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+										    Mode
+										    <span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">NONE</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ANSI</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">DB2</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">MAXDB</a></li>
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">MYSQL323</a></li>										  
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">MYSQL40</a></li>										  
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">MYSQL323</a></li>										  
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">ORACLE</a></li>										  
+										    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">TRADITIONAL</a></li>										  
+										  </ul>
+										</div>
+										<span><input type="checkbox" style="margin-left:5px"/></span>Do not use AUTO_INCREMENT for zero values
+									</div>
+							</div>	
+							<!--.......................... Format Specific Options ..............................-->	
+							<!-- ############ TAB IMPORT ##########################################-->               						
+                        </div>
                         <div class="tab-pane fade" id="tab7">Settings</div>
                         <div class="tab-pane fade" id="tab8">Synchronize</div>
                         <div class="tab-pane fade" id="tab9">
@@ -412,7 +510,7 @@ function fixArrayKey(&$arr)
 function dropdownPrepare($query,$field){
 	$results = mysql_query($query);
 
-	echo '<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">';
+	echo '<ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">';
 	while($row=mysql_fetch_array($results,MYSQL_ASSOC)){
     	  fixArrayKey($row);
 	      extract($row); 
@@ -421,11 +519,5 @@ function dropdownPrepare($query,$field){
 	      echo "</a></li>"; 	       
     } 
     echo '</ul>';
-
-
-	// <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-	// <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-	// <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-	// <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
 }
 ?>

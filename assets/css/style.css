@@ -196,6 +196,12 @@ background-color: #294C0D !important;
     padding: 27px 10px !important;
 }
 
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
 
 /*######################################## TAB STYLES ##########################################*/
 
