@@ -179,23 +179,23 @@
                 <div class="panel with-nav-tabs panel-primary">
                 <div class="panel-heading">
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#tab1" data-toggle="tab">Databases</a></li>
-                            <li><a href="#tab2" data-toggle="tab">SQL</a></li>
-                            <li><a href="#tab3" data-toggle="tab">Status</a></li> 
-                            <li><a href="#tab4" data-toggle="tab">Users</a></li> 
-                            <li><a href="#tab5" data-toggle="tab">Export</a></li> 
-                            <li><a href="#tab6" data-toggle="tab">Import</a></li> 
-                            <li><a href="#tab7" data-toggle="tab">Settings</a></li> 
-                            <li><a href="#tab8" data-toggle="tab">Synchronize</a></li> 
-                            <li><a href="#tab9" data-toggle="tab">Replication</a></li> 
-                            <li><a href="#tab10" data-toggle="tab">Variables</a></li> 
-                            <li><a href="#tab11" data-toggle="tab">Charsets</a></li> 
-                            <li><a href="#tab12" data-toggle="tab">Engines</a></li>                                                        
+                            <li class="active"><a href="#tabX1" data-toggle="tab">Databases</a></li>
+                            <li><a href="#tabX2" data-toggle="tab">SQL</a></li>
+                            <li><a href="#tabX3" data-toggle="tab">Status</a></li> 
+                            <li><a href="#tabX4" data-toggle="tab">Users</a></li> 
+                            <li><a href="#tabX5" data-toggle="tab">Export</a></li> 
+                            <li><a href="#tabX6" data-toggle="tab">Import</a></li> 
+                            <li><a href="#tabX7" data-toggle="tab">Settings</a></li> 
+                            <li><a href="#tabX8" data-toggle="tab">Synchronize</a></li> 
+                            <li><a href="#tabX9" data-toggle="tab">Replication</a></li> 
+                            <li><a href="#tabX10" data-toggle="tab">Variables</a></li> 
+                            <li><a href="#tabX11" data-toggle="tab">Charsets</a></li> 
+                            <li><a href="#tabX12" data-toggle="tab">Engines</a></li>                                                        
                         </ul>
                 </div>
                 <div class="panel-body">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="tab1">
+                        <div class="tab-pane fade in active" id="tabX1">
                         <!-- ############ TAB DATABASES ##########################################-->  
                         <h4>Databases</h4>  
                         <div class="panel panel-primary">
@@ -236,7 +236,7 @@
                         <!-- ############ TAB DATABASES ##########################################-->                                       
                         
                         </div>
-                        <div class="tab-pane fade" id="tab2">
+                        <div class="tab-pane fade" id="tabX2">
                         <!-- ############ TAB SQL ##########################################-->                                       
                         	
                         	<div class="panel panel-primary">
@@ -253,7 +253,7 @@
 							</div>	
 						<!-- ############ TAB SQL ##########################################-->                                                               
                         </div>
-                        <div class="tab-pane fade" id="tab3">
+                        <div class="tab-pane fade" id="tabX3">
                         <!-- ############ TAB Status ##########################################-->  
                         <h4>Runtime Information</h4>   
                         <div class="panel with-nav-tabs panel-primary">
@@ -282,7 +282,7 @@
                         </div>                                              
                         <!-- ############ TAB Status ##########################################-->                                                                                      	
                         </div>
-                        <div class="tab-pane fade" id="tab4">
+                        <div class="tab-pane fade" id="tabX4">
                         <!-- ############ TAB USERS ##########################################-->               
                         
                         	<?php
@@ -292,7 +292,7 @@
                         ?>
                         <!-- ############ TAB USERS ##########################################-->                            	
                         </div>
-                        <div class="tab-pane fade" id="tab5">
+                        <div class="tab-pane fade" id="tabX5">
                         <!-- ############ TAB EXPORT ##########################################-->                            	
                         
                         	<h4>Exporting databases from the current server</h4>
@@ -336,7 +336,7 @@
                         <!-- ############ TAB EXPORT ##########################################-->                            	                        
                         </div>
                 		<!-- ############ TAB IMPORT ##########################################-->               						
-                        <div class="tab-pane fade" id="tab6">
+                        <div class="tab-pane fade" id="tabX6">
                         	<h4>Importing into the current Server</h4>
                         	<!-- ..................File to Import ......................... -->							
                         	<div class="panel panel-primary">
@@ -431,10 +431,10 @@
 							<!--.......................... Format Specific Options ..............................-->	
 							<!-- ############ TAB IMPORT ##########################################-->               						
                         </div>
-                        <div class="tab-pane fade" id="tab7">Settings</div>
+                        <div class="tab-pane fade" id="tabX7">Settings</div>
 
                         <!-- ############ TAB IMPORT ##########################################-->               						                        
-                        <div class="tab-pane fade" id="tab8">
+                        <div class="tab-pane fade" id="tabX8">
                         <h4>Synchronize</h4>
                         	<div class="panel panel-primary">                        		
 								<div class="panel-heading">
@@ -450,7 +450,7 @@
                         </div>
                         <!-- ############ TAB IMPORT ##########################################-->               						
                         
-                        <div class="tab-pane fade" id="tab9">
+                        <div class="tab-pane fade" id="tabX9">
                         <!-- ############ TAB REPLICATION ##########################################-->               
                         
                         		<div class="panel panel-primary">
@@ -469,7 +469,7 @@
 								</div>
 						<!-- ############ TAB REPLICATION ##########################################-->                                       
                         </div>
-                        <div class="tab-pane fade" id="tab10">
+                        <div class="tab-pane fade" id="tabX10">
                         <!-- ############ TAB VARIABLES ##########################################-->               
                         
                         	<?php
@@ -480,7 +480,8 @@
                         <!-- ############ TAB VARIABLES ##########################################-->               
                         
                         </div>
-                        <div class="tab-pane fade" id="tab11">
+
+                        <div class="tab-pane fade" id="tabX11">
                         <!-- ############ TAB CHARSETS ##########################################-->
                         	
 						<?php
@@ -490,15 +491,26 @@
                         	simpleTableRenderer($results,"CHARACTER SETS");
                         ?>
 						<!-- ############ TAB CHARSETS ##########################################-->                                                </div>
-                        <div class="tab-pane fade" id="tab12">
+                        <div class="tab-pane fade" id="Xtab12">
                         <!-- ############ TAB ENGINES ##########################################-->               
                         <?php
                         	$query = "SHOW ENGINES";
                         	$results = mysql_query($query,$_SESSION['DB']);
                         	simpleTableRenderer($results,"ENGINES");
                         ?>
+                        </div>
                         <!-- ############ TAB ENGINES ##########################################-->                                       
-                        </div>                  
+                        
+                        <!-- ############ TAB DESIGNER ##########################################-->               
+                        <div class="tab-pane fade" id="Xtab13">
+                        <?php
+                        	$query = "SHOW ENGINES";
+                        	$results = mysql_query($query,$_SESSION['DB']);
+                        	simpleTableRenderer($results,"ENGINES");
+                        ?>
+                        </div> 
+                        <!-- ############ TAB DESIGNER ##########################################-->                                       
+                                         
                     </div>
                 </div>
             </div>
