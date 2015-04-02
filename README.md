@@ -25,4 +25,4 @@ Currently 6 themes are supported and 2 more proposed themes will be added later.
 
 ### Errors and Suggestion
 
-If you have find any errors in my code or would like to suggest something , please drop a mail to riaz.2012@gmail.com.
+If you have find and issuw with this software or would like to contribute to this project , please drop a mail to riaz.2012@gmail.com.
